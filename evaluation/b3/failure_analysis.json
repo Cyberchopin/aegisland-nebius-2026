@@ -1,0 +1,42 @@
+{
+  "confirmed": {
+    "citation_success_recorded": false,
+    "elapsed_latency_ms": 2304.33,
+    "estimated_cost_usd": 0.0003276,
+    "finish_reason_retained": false,
+    "http_status": 200,
+    "output_budget_exhausted": true,
+    "returned_model": "nvidia/nemotron-3-super-120b-a12b",
+    "review_status": "not_verified",
+    "usage": {
+      "completion_tokens": 256,
+      "prompt_tokens": 324,
+      "total_tokens": 580
+    }
+  },
+  "evidence_grounded_review_demonstrated": false,
+  "format_version": 1,
+  "hypotheses": [
+    "output_truncation",
+    "reasoning_budget_exhaustion",
+    "invalid_selection_json",
+    "invalid_selection_schema",
+    "citation_mismatch",
+    "model_refusal"
+  ],
+  "live_api_requests_during_B3": 0,
+  "mode": "offline_failure_analysis",
+  "runtime_integration_demonstrated": true,
+  "smallest_proposed_change": {
+    "from": 256,
+    "implemented": false,
+    "requires_new_owner_authorization": true,
+    "setting": "max_tokens",
+    "success_guaranteed": false,
+    "to": 1024
+  },
+  "source_evidence": "evaluation/results/live_smoke_002.json",
+  "source_sha256": "399fe81ebe1a39a074359867f47ec17863d505da1cce320e0d6c9511944e1d36",
+  "third_attempt_created": false,
+  "truncation_confirmed": false
+}

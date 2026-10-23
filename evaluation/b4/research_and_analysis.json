@@ -1,0 +1,48 @@
+{
+  "candidate_status": "blocked_no_attempt_004_created",
+  "conditional_estimate_324_input_256_output_usd": 0.0003276,
+  "confirmed_failure": {
+    "elapsed_latency_ms": 6450.761,
+    "failure_code": "response_truncated",
+    "finish_reason": "length",
+    "http_status": 200,
+    "token_details": {
+      "completion_tokens_details": {
+        "reasoning_tokens": 1024
+      },
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "usage": {
+      "completion_tokens": 1024,
+      "prompt_tokens": 324,
+      "total_tokens": 1348
+    }
+  },
+  "estimate_is_hard_cap": false,
+  "fourth_attempt_created": false,
+  "implemented": "offline_serialization_and_fail_closed_provider_gate",
+  "live_inference_requests": 0,
+  "nebius_exact_model_control_compatibility": "not_confirmed_by_reviewed_primary_sources",
+  "nvidia_model_control": {
+    "low_effort": {
+      "chat_template_kwargs": {
+        "enable_thinking": true,
+        "low_effort": true
+      }
+    },
+    "off": {
+      "chat_template_kwargs": {
+        "enable_thinking": false
+      }
+    }
+  },
+  "source_evidence_sha256": "61805c7c375c0b2196cfaa07b94a5a6db14e51ba08fbcb3e89fa5150a10e2460",
+  "sources": [
+    "https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-BF16",
+    "https://docs.tokenfactory.nebius.com/api-reference/inference/create-chat-completion",
+    "https://github.com/nebius/token-factory-cookbook/blob/main/models/nemotron/nemotron3-super-120B.md"
+  ],
+  "stage": "B4"
+}

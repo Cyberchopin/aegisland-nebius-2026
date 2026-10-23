@@ -1,0 +1,21 @@
+{
+  "all_non_billing_conditions_pass": false,
+  "approximate_input_tokens_chars_div_4": 267,
+  "automatic_retries": false,
+  "billing_cap_verified": false,
+  "credential_visible": false,
+  "current_max_tokens": 512,
+  "current_timeout_seconds": 30,
+  "endpoint": "https://api.tokenfactory.us-central1.nebius.com/v1/chat/completions",
+  "fixed_synthetic_trace_valid": true,
+  "input_content_characters": 1069,
+  "live_inference_requests": 0,
+  "mode": "offline_settings_audit",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "output_limit_condition_pass": false,
+  "requested_max_tokens_range": [
+    128,
+    256
+  ],
+  "token_count_is_estimate": true
+}

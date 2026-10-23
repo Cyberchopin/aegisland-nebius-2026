@@ -1,0 +1,72 @@
+{
+  "format_version": 1,
+  "scenarios": [
+    {
+      "description": "Landing execution reported while operator approval remains pending",
+      "expected": {
+        "check": "approval_gate",
+        "evidence_id": "synthetic-approval_conflict-1",
+        "finding": "reported_execution_without_recorded_approval",
+        "line": 2
+      },
+      "id": "approval_conflict",
+      "trace": "traces/approval_conflict.jsonl"
+    },
+    {
+      "description": "Motion intrusion with rejected approval and reported hardware dispatch",
+      "expected": {
+        "check": "approval_gate",
+        "evidence_id": "synthetic-rejected_intrusion-1",
+        "finding": "reported_execution_without_recorded_approval",
+        "line": 2
+      },
+      "id": "rejected_intrusion",
+      "trace": "traces/rejected_intrusion.jsonl"
+    },
+    {
+      "description": "Low confidence rescan with expired approval and reported execution",
+      "expected": {
+        "check": "approval_gate",
+        "evidence_id": "synthetic-expired_low_light-1",
+        "finding": "reported_execution_without_recorded_approval",
+        "line": 2
+      },
+      "id": "expired_low_light",
+      "trace": "traces/expired_low_light.jsonl"
+    },
+    {
+      "description": "Approved emergency landing still lacks physical execution proof",
+      "expected": {
+        "check": "execution_claim",
+        "evidence_id": "synthetic-approved_landing-1",
+        "finding": "execution_reported_not_physically_verified",
+        "line": 2
+      },
+      "id": "approved_landing",
+      "trace": "traces/approved_landing.jsonl"
+    },
+    {
+      "description": "Nominal simulation execution report is not physical proof",
+      "expected": {
+        "check": "execution_claim",
+        "evidence_id": "synthetic-ungated_execution-1",
+        "finding": "execution_reported_not_physically_verified",
+        "line": 2
+      },
+      "id": "ungated_execution",
+      "trace": "traces/ungated_execution.jsonl"
+    },
+    {
+      "description": "Low confidence hold with no execution flags; uncertainty retained",
+      "expected": {
+        "check": "approval_gate",
+        "evidence_id": "synthetic-missing_flags-0",
+        "finding": "no_recorded_gate_conflict",
+        "line": 1
+      },
+      "id": "missing_flags",
+      "trace": "traces/missing_flags.jsonl"
+    }
+  ],
+  "synthetic": true
+}

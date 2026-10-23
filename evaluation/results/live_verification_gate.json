@@ -1,0 +1,28 @@
+{
+  "account_access_quota_pricing": "not_verified",
+  "actual_model": null,
+  "authorization_consumed": false,
+  "blockers": [
+    "NEBIUS_API_KEY_not_configured",
+    "enforceable_cost_ceiling_not_verified"
+  ],
+  "cost_ceiling_verified": false,
+  "credential_and_configuration_valid": false,
+  "credential_present": false,
+  "estimated_actual_cost_usd": null,
+  "format_version": 1,
+  "http_status": null,
+  "input_sha256": "9ca93651e4a52ed889e3463c5a1ece3181e65a6656ebe0c9c2b6d21fcfa10b37",
+  "latency_ms": null,
+  "live_api_calls": 0,
+  "maximum_authorized_cost_usd": 1,
+  "mode": "offline_preflight",
+  "owner_authorization": "exactly_one_request_conditional_2026-10-22",
+  "ready_for_authorized_attempt": false,
+  "request_attempted": false,
+  "runtime_requirement_demonstrated": false,
+  "status": "not_attempted",
+  "timestamp_utc": "2026-10-22T07:11:22.154475+00:00",
+  "trace_valid": true,
+  "usage": null
+}

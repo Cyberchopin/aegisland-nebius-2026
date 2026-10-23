@@ -1,0 +1,25 @@
+{
+  "attempt_id": "b3-smoke-003",
+  "authorization_status": "candidate_only_waiting_for_separate_final_GO",
+  "automatic_retries": false,
+  "candidate_payload_sha256": "774091e40bc8026f3aad8a68c7f31b822433d18fafd6ed5f515f16d6cb12a11e",
+  "changed_request_parameter": {
+    "max_tokens": {
+      "candidate": 1024,
+      "previous": 256
+    }
+  },
+  "endpoint": "https://api.tokenfactory.nebius.com/v1/chat/completions",
+  "estimated_cost_at_prior_prompt_count_usd": 0.0010188,
+  "evidence": "evaluation/results/live_smoke_003.json",
+  "evidence_exists": false,
+  "guard": "evaluation/results/live_attempt_003_consumed.json",
+  "guard_exists": false,
+  "hard_account_spending_cap_verified": false,
+  "input_messages_unchanged": true,
+  "live_api_requests": 0,
+  "max_attempts": 1,
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "planning_estimate_at_1000_prompt_tokens_usd": 0.0012216,
+  "timeout_seconds": 15
+}

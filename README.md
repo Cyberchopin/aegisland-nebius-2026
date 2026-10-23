@@ -1,115 +1,95 @@
-# AegisLand — Nebius x NVIDIA Global AI Hackathon 2026
+# AegisLand — evidence review for Physical AI
 
-Competition-specific integration repository for AegisLand.
+Nebius × NVIDIA Global AI Hackathon 2026 submission repository.
 
-## Core project
+**Real Nebius-hosted NVIDIA inference succeeded. Live citation-grounded review
+remains `not_verified`.** This repository provides a working offline evidence
+reader, deterministic review baseline, bounded provider adapter and preserved
+runtime/failure evidence. Model recommendations cannot issue flight commands.
 
-Long-term research and development:
-https://github.com/Cyberchopin/aegisland-agentic-vision
+## Run locally
 
-Pinned development baseline:
-eda23d3
-
-## Planned contribution
-
-Build an evidence-review assistant that helps operators inspect
-AegisLand simulation and shadow-supervision runs.
-
-The planned integration will:
-- Run on Nebius Token Factory or Nebius AI Cloud
-- Use at least one NVIDIA open-source model
-- Explain recorded evidence and highlight failures
-- Link explanations to trace records
-- Keep model outputs outside the flight-command execution path
-
-This integration is not yet implemented or validated.
-
-## Reuse and provenance
-
-Existing AegisLand functionality and new hackathon contributions
-will be documented separately, with source versions and licenses.
-
-Core code is not copied into this repository.
-Any distributed core modules require an explicit licensing decision.
-
-## Submission requirements to complete
-
-- Working Nebius and NVIDIA model integration
-- Reproducible setup and evaluation
-- Public source repository with an appropriate open-source license
-- Required demo video and submission materials
-
-## Current limitations
-
-This repository includes a local trace reader, not a completed submission.
-No autonomous flight, real-time performance, or speedup is claimed.
-
-## Local trace reader (standard library only)
-
-This is a compatibility reader for AegisLand traces that currently have no
-`schema_version`. `reader_format_version` describes the output, not an upstream
-schema guarantee. Python 3.11+ is recommended; no installation is required.
-From this repository:
+Python 3.11+; standard library only. No installation, API key or paid service is
+needed for these commands. Run from the repository root:
 
 ```sh
-python3 -B -m trace_reader tests/fixtures/synthetic_trace.jsonl
-python3 -B -m trace_reader /absolute/path/trace.jsonl --include-records
 python3 -B -m unittest discover -s tests -v
+python3 -B -m trace_reader evaluation/traces/approval_conflict.jsonl
+python3 -B -m nebius_review evaluation/traces/approval_conflict.jsonl
+python3 -B scripts/demo_runbook.py --output-dir /tmp/aegisland-recording-01
 ```
 
-Function entry point: `from trace_reader import read_trace`, then
-`summary = read_trace("/absolute/path/trace.jsonl")`.
-Only the explicitly supplied file is read: there is no runs discovery, model
-call, core import, or input rewrite. JSON output contains diagnostics with
-1-based physical line numbers; file-level errors use `line: null`.
-Exit codes: 0 = no validation errors (warnings possible), 1 = invalid data,
-2 = file I/O or command-line error. `valid` never means safe flight or successful
-execution; even an empty file can be structurally valid.
+The review command defaults to **SYNTHETIC / OFFLINE MOCK**, not NVIDIA inference.
+The demo refuses an existing output directory; choose a fresh name on each run.
+Add `--interactive` to pause between modules while recording. The runbook blocks
+network/live provider calls, writes JSON plus `demo_report.html` outside this
+repository, and checks historical evidence hashes before and after execution.
+Open the generated HTML locally for screenshots; it is not a hosted application.
 
-The required compatibility subset is `trace_id`, nonnegative integer
-`sequence`, and objects `telemetry`, `evidence`, `decision`, `command`.
-Telemetry requires battery_percent [0,100] and altitude_m >= 0. Evidence requires
-an evidence_id, nonnegative frame_index, and confidence/obstacle_risk/motion_risk
-in [0,1]. Decisions require action, safety_level, risk_score [0,1], boolean
-requires_human_approval, string-list reasons, and evidence_id matching the
-embedded evidence. A supplied non-null raw_decision follows the same checks.
-Command requires status; a supplied approval_id or approval_status requires both.
-Optional known fields are type checked; unknown fields are allowed and preserved
-in accepted records with `--include-records`. Unknown states are counted literally
-with warnings and are never mapped to success. A declared schema_version emits
-a compatibility warning rather than claiming support for that version.
+Do not rerun historical smoke commands or reset consumed guards. Do not use
+`run_local_checks` with its default paths: it overwrites historical result JSON.
+Fresh offline evaluation can be written with:
 
-Final decisions, raw decisions, command status, lifecycle status, and reported
-execution flags have separate counters. Missing flags are explicitly missing;
-raw decisions are never synthesized. Decision counts are not execution counts,
-and reported flags/statuses are not proof of physical execution. Reasons count
-records containing each reason. Evidence links identify their source line,
-trace, sequence, evidence ID and frame index; this checks embedded associations,
-not external image existence or image integrity.
+```sh
+python3 -B -m model_evaluation --output /tmp/nebius-offline-evaluation.json
+```
 
-Event identity is (trace_id, sequence). Semantically identical JSON objects at
-the same identity are duplicate events and excluded; differing content at the
-same identity is an error, with only the first valid event included. Object key
-order/whitespace do not affect this comparison; array order and unknown fields
-do. Approval identity is (trace_id, approval_id). Unique approvals, nonduplicate
-observations, state changes, repeated-state observations, and duplicate events
-are separate. State changes follow file order, including unknown states; they
-are observations, not a reconstructed authorization history. Sequence starts,
-gaps, and out-of-order values produce diagnostics, not fabricated events.
+## What the integration does
 
-Invalid records are excluded from all semantic aggregates. Blank, malformed,
-invalid UTF-8, duplicate-key, non-finite, oversized, and conflicting lines are
-diagnosed without printing their contents. Input is streamed with a default
-1 MiB line limit (including newline); `--max-line-bytes` changes it. SHA-256
-covers every original byte, including invalid or oversized lines. A failed read
-has no complete hash; a partial hash is labelled separately. File metadata is
-checked for changes during reading, but this is not an immutable snapshot or
-authenticity guarantee. Streaming I/O does not mean constant memory: event and
-approval indexes, diagnostics, evidence links, and optional records grow with
-input size.
+An explicit JSONL file is validated and hashed. A bounded projection contains
+line/event identities, evidence risk values, approval metadata and reported
+execution flags. The review interface accepts exactly one cited event and one
+allowed check: `approval_gate` or `execution_claim`. Local code validates that
+selection and evaluates the recorded facts. It does not infer physical execution
+from a status flag or authorize a flight action.
 
-The fixture and generated unittest inputs are explicitly **SYNTHETIC**. Tests
-exercise parsing, CLI exit codes, counters, scoped approval deduplication,
-sequence/evidence errors, unknown states, exact hashes and unchanged input.
-No real trace regression has been run or claimed. This reader adds no model
-integration, dependencies, or license.
+The default mock selects the first event. The no-model baseline prioritizes
+recorded approval conflicts, then execution reports. Both share strict parsing
+and citation validation. Six synthetic scenarios compare them reproducibly.
+
+## Retained results
+
+| Source | Result | Limit |
+| --- | --- | --- |
+| Attempt 001 | HTTP 401; no returned model/usage | Authentication failed; precise cause unproven |
+| Attempt 002 | HTTP 200, returned Nemotron 3 Super; 324 input / 256 output tokens; 2,304.33 ms | Review `not_verified`; old metadata cannot establish its exact failure |
+| Attempt 003 | HTTP 200, returned same model; 324 input / 1,024 output tokens; 6,450.761 ms | All 1,024 output tokens were reasoning; finish `length`; review `not_verified` |
+| Synthetic evaluation | No-model baseline 6/6; first-event mock 1/6 | Constructed harness results, not NVIDIA accuracy |
+| B4 verification | 74 offline tests pass | No successful live review or model-quality benchmark |
+
+Model: `nvidia/nemotron-3-super-120b-a12b`.
+Successful runtime endpoint: `https://api.tokenfactory.nebius.com/v1/chat/completions`.
+Usage-based cost estimates are not invoices or spending caps. All three allowances
+are consumed. A fourth attempt has not been prepared or authorized.
+
+NVIDIA documents non-thinking controls. Exact hosted Nebius support remains
+unconfirmed; the new configuration is serialized/tested offline and fails
+locally before transmission. No token-budget increase or speculative API retry
+is enabled. Credentials remain environment-only and are never needed for the demo.
+
+## Evidence and submission materials
+
+- [Evidence table and artifact hashes](docs/submission/EVIDENCE_SUMMARY.md)
+- [Recording runbook and narration](docs/submission/DEMO_SCRIPT.md)
+- [Screenshot checklist](docs/submission/SCREENSHOTS_PLAN.md)
+- [Devpost draft](docs/submission/DEVPOST_DRAFT.md)
+- [Personal submission checklist](docs/submission/SUBMISSION_CHECKLIST.md)
+- [Readiness](docs/NEBIUS_READINESS.md), [B4 research](docs/B4_REASONING_REMEDIATION.md),
+  [trace contract](docs/TRACE_READER_CONTRACT.md), [evaluation contract](docs/MODEL_EVALUATION.md)
+
+Video, screenshots and Devpost entry must be completed by the owner. Nothing
+has been deployed, pushed, merged or submitted by this preparation work.
+
+## Provenance and license
+
+The separate [AegisLand core](https://github.com/Cyberchopin/aegisland-agentic-vision)
+provides the prior simulation/perception work; the referenced baseline is
+`eda23d3`. This competition repository does not import or copy core modules,
+model weights or core video assets. Its new contribution is the trace-review
+integration, synthetic evaluation, provider verification and failure diagnostics.
+All local trace fixtures are synthetic; no real core trace regression, hardware
+operation, flight certification, safety improvement or model speedup is claimed.
+
+This integration is [MIT licensed](LICENSE). The license does not cover external
+model/core/service rights. See [third-party boundaries](THIRD_PARTY_NOTICES.md)
+and [license verification](docs/submission/LICENSE_VERIFICATION.md).

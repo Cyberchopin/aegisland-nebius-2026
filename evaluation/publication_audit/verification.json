@@ -1,0 +1,123 @@
+{
+  "account_details_checks": {
+    "cached_origin_main": "efd35cac2fbcfb8e24c0ef9d1112ae6688bfa328",
+    "email_address_files": [],
+    "new_commits_created": 0,
+    "origin_main_online_freshness": "not_checked_offline",
+    "sensitive_json_field_findings": []
+  },
+  "api_requests": 0,
+  "branch": "codex-b/stage-b1-nebius",
+  "changed_path_count": 63,
+  "checks": {
+    "clean_candidate_demo": {
+      "artifacts_exist": true,
+      "external_network_calls": 0,
+      "preservation_report_passed": true,
+      "returncode": 0
+    },
+    "clean_candidate_test_process_exit": 0,
+    "clean_candidate_tests": {
+      "errors": [],
+      "failures": [],
+      "successful": true,
+      "tests_run": 74
+    },
+    "environment_and_cache_ignore_rules": {
+      ".env": true,
+      ".env.local": true,
+      ".venv/example": true,
+      "__pycache__/example.pyc": true
+    },
+    "guard_resets": 0,
+    "inference_requests": 0,
+    "live_evidence_redaction_checks": {
+      "live_smoke.json": {
+        "no_raw_content_or_headers": true,
+        "only_allowlisted_fields": true,
+        "status_not_verified": true
+      },
+      "live_smoke_002.json": {
+        "no_raw_content_or_headers": true,
+        "only_allowlisted_fields": true,
+        "status_not_verified": true
+      },
+      "live_smoke_003.json": {
+        "no_raw_content_or_headers": true,
+        "only_allowlisted_fields": true,
+        "status_not_verified": true
+      }
+    },
+    "network_requests_in_audit": 0,
+    "staged_files_unchanged_empty": true
+  },
+  "ci_artifact_caveat": "CI regenerates two offline report copies; committed historical evidence remains authoritative",
+  "complete_tree_file_count": 66,
+  "credential_scan": {
+    "credential_pattern_findings": [],
+    "history_commits_checked": 4,
+    "history_credential_pattern_findings": [],
+    "suspicious_paths": []
+  },
+  "deployments": 0,
+  "existing_commits": [
+    "efd35cac2fbcfb8e24c0ef9d1112ae6688bfa328 Add GitHub Actions for trace reader tests",
+    "4b90295b170d2d50ee477b14481d648bb9acea89 Add trace reader with validation and synthetic tests",
+    "8d5fbdb02b5ff8793d9c8b50960df11aa240dc93 Revise README for AegisLand Hackathon 2026",
+    "a5c7da414a2e427668cbef10cb3cb0751a47a2ff Initial commit"
+  ],
+  "file_manifest": "evaluation/publication_audit/file_manifest.json",
+  "final_candidate_scan": {
+    "all_non_self_manifest_hashes_match": true,
+    "broken_publication_doc_links": [],
+    "files_scanned": 66,
+    "findings": []
+  },
+  "format_version": 1,
+  "git_identity": {
+    "author_identity_resolves": false,
+    "committer_identity_resolves": false
+  },
+  "guard_resets": 0,
+  "head": "efd35cac2fbcfb8e24c0ef9d1112ae6688bfa328",
+  "historical_evidence_count": 27,
+  "historical_evidence_sha256": {
+    "evaluation/attempt003_preparation/candidate.json": "92eef61f657f9d913df754ecff8025b050cbd85b2958656c0c2bf4d373458b01",
+    "evaluation/attempt003_preparation/offline_tests.json": "8f3353ec3de1a09e2657a3a303a9d27bf3adc73c348dbdf9931f44db93b54c05",
+    "evaluation/b3/failure_analysis.json": "7172c0557132de0882e1b6df010a6254984cc0a8fd5dd537150c521f90b23f5d",
+    "evaluation/b3/offline_tests.json": "4a4c94175892b710c5231025268bae1ca9500ff9ab04f2fc3130210f095e0d67",
+    "evaluation/b4/offline_tests.json": "09ce34e9ff6acfd4b0e9f12e0149dc9cb2df3df48aa79862c2921566789ce386",
+    "evaluation/b4/research_and_analysis.json": "0f67c1cda1be69d6d7a91cc96f4057296921a43b4e59ca77aa6199411bdad75f",
+    "evaluation/results/live_attempt_002_consumed.json": "143957b50213325dc33a0cfdc1c03ed6facec33a32e444f6a2992528b13de65f",
+    "evaluation/results/live_attempt_003_consumed.json": "143957b50213325dc33a0cfdc1c03ed6facec33a32e444f6a2992528b13de65f",
+    "evaluation/results/live_attempt_consumed.json": "143957b50213325dc33a0cfdc1c03ed6facec33a32e444f6a2992528b13de65f",
+    "evaluation/results/live_smoke.json": "b50107f155776362c51d32c3674633529a4c9cab9f2270e61a486b7dfba163d0",
+    "evaluation/results/live_smoke_002.json": "399fe81ebe1a39a074359867f47ec17863d505da1cce320e0d6c9511944e1d36",
+    "evaluation/results/live_smoke_003.json": "61805c7c375c0b2196cfaa07b94a5a6db14e51ba08fbcb3e89fa5150a10e2460",
+    "evaluation/results/live_verification_gate.json": "6d69122f7cbf3afebefdef6e863359046b01f707b800c0be99502a40b382a50f",
+    "evaluation/results/local_tests.json": "ee1c1f8db9f4a65c3f2d35b0d95fe5d5d25e6a51a41000a382d8ede94bb9c6ff",
+    "evaluation/results/offline_evaluation.json": "39173c2639f7846d01bfdc2448d6fbe72ead89a027eaf1cb69559fcb7fcdf9c1",
+    "evaluation/results/offline_preflight.json": "d8ac023734e64d8861cc5f61d10d09a6d3b5d679d2268c53abdbdf7b32c3211a",
+    "evaluation/results/offline_settings_audit.json": "ed95252ba585372c46afc842d16a71c037054240e3889109e0a364234d1cad9f",
+    "evaluation/results/resume_readiness.json": "1673ef825e00b1c8156f1d44741b1759e347d79d6957323abcca146e56f3953f",
+    "evaluation/results/second_attempt_preparation.json": "cc903f66604f7b3fe5f9fb006b5f601ccba0cfcf6a117479d0abe6993aa716f1",
+    "evaluation/scenarios.json": "13c1ee4f33f8708f720093d773d19cf91cca19f96b2c2c4a2d848534bfa19203",
+    "evaluation/submission_preparation/verification.json": "63cb01d61bf762863c707ecc445f62f6ae84efeb3ce0669c8eb71912eed1111b",
+    "evaluation/traces/approval_conflict.jsonl": "9ca93651e4a52ed889e3463c5a1ece3181e65a6656ebe0c9c2b6d21fcfa10b37",
+    "evaluation/traces/approved_landing.jsonl": "ea887b7abe024cb35f5fc6f2c503d4ed6d68ab14fd6d78e67b47ee13d09d9e0e",
+    "evaluation/traces/expired_low_light.jsonl": "97fa185b3d6861a8acdac250bffb25b8710820e725f95ae5c967998c14db27f4",
+    "evaluation/traces/missing_flags.jsonl": "5b2403d2b27c2aa7d633626b78fa2cddafb427e601837ebaaa5a71be4ec523d8",
+    "evaluation/traces/rejected_intrusion.jsonl": "7cc5e6a258135c1bc4e5a87d1674913cbbe3ebdcdb7e464168114455b34be0ec",
+    "evaluation/traces/ungated_execution.jsonl": "4760fe7a6a9c6cf25b53bec95e1ae07fdc332f7ec5eb3c602bc4b11a25dc2827"
+  },
+  "historical_evidence_unchanged": true,
+  "initial_content_scan_count": 62,
+  "merges": 0,
+  "network_requests": 0,
+  "new_commit_count": 0,
+  "proposed_commit_sha": null,
+  "proposed_commit_title": "Prepare AegisLand Nebius submission with preserved runtime evidence",
+  "proposed_new_commit_count": 1,
+  "pushes": 0,
+  "staged_file_count": 0
+}

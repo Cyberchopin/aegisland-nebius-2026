@@ -1,0 +1,16 @@
+{
+  "synthetic": true,
+  "cases": [
+    {"id": "valid_conflict", "content": "{\"line\":2,\"evidence_id\":\"synthetic-approval_conflict-1\",\"check\":\"approval_gate\"}", "expected": "valid"},
+    {"id": "missing_citation", "content": "{\"check\":\"approval_gate\"}", "expected": "missing_citation"},
+    {"id": "invented_citation", "content": "{\"line\":2,\"evidence_id\":\"invented\",\"check\":\"approval_gate\"}", "expected": "citation_mismatch"},
+    {"id": "wrong_line", "content": "{\"line\":1,\"evidence_id\":\"synthetic-approval_conflict-1\",\"check\":\"approval_gate\"}", "expected": "citation_mismatch"},
+    {"id": "unsupported_command", "content": "{\"line\":2,\"evidence_id\":\"synthetic-approval_conflict-1\",\"check\":\"land\"}", "expected": "unsupported_check"},
+    {"id": "partial_json", "content": "{\"line\":2,\"evidence_id\":", "expected": "invalid_selection_json"},
+    {"id": "malformed_json", "content": "not JSON", "expected": "invalid_selection_json"},
+    {"id": "empty_text", "content": "", "expected": "invalid_selection_json"},
+    {"id": "code_fence", "content": "```json\n{}\n```", "expected": "invalid_selection_json"},
+    {"id": "duplicate_keys", "content": "{\"line\":1,\"line\":2}", "expected": "invalid_selection_json"},
+    {"id": "extra_field", "content": "{\"line\":2,\"evidence_id\":\"synthetic-approval_conflict-1\",\"check\":\"approval_gate\",\"command\":\"land\"}", "expected": "invalid_selection_schema"}
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "errors": [],
+  "failures": [],
+  "format_version": 1,
+  "live_api_calls": 0,
+  "python_version": "3.12.3",
+  "skipped": [],
+  "source_sha256": {
+    "live_smoke.py": "5536593f5389ba1b38e742386d74aeac6ba4578d72d7286647194fe856a86a41",
+    "live_smoke_second.py": "8f912aaf2c4cea159bb986a3fca511703e35a34f67299a8a79acc437bf668388",
+    "model_evaluation.py": "0c354a299bbe2604a503c5d7023e44236bcbd87b92f20243cfc9246b08102a61",
+    "nebius_review.py": "be4139da0fb6f7b333e038d90405ed739bae0231d3494088a4c24efe0a2f9104",
+    "run_local_checks.py": "91f11ba5cf7621963e12a526c2a6782919f7075e4999274808081e68c42521d5",
+    "tests/test_nebius_review.py": "70e6b37b8c551057f787b66457b77764e25b1ea62734ce5617a78eb652c35c1d",
+    "tests/test_second_attempt.py": "664d75c23883bf2585577044d498e4321a93073a514cc5cd9afea26a08cdda02",
+    "tests/test_stage_b2.py": "69bd6af74ae5186d608202eefc5db9f9827b5ddaa806eba30b6f4b8d5a523e3b",
+    "tests/test_trace_reader.py": "adcde5046473b15d336fa51d936d141f00e0b75db4b04ba142400858033a6618",
+    "trace_reader.py": "604622671a03ee709f8f2b4e6fea5a76a89dd294f5b8dae4a43ab78a20f01b15"
+  },
+  "successful": true,
+  "tests_run": 55
+}
