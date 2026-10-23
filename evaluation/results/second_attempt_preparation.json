@@ -1,0 +1,14 @@
+{
+  "attempt_id": "b2-smoke-002",
+  "authorization_status": "awaiting_separate_final_GO",
+  "endpoint": "https://api.tokenfactory.nebius.com/v1/chat/completions",
+  "first_attempt_records_unchanged": true,
+  "first_attempt_sha256": {
+    "evaluation/results/live_attempt_consumed.json": "143957b50213325dc33a0cfdc1c03ed6facec33a32e444f6a2992528b13de65f",
+    "evaluation/results/live_smoke.json": "b50107f155776362c51d32c3674633529a4c9cab9f2270e61a486b7dfba163d0"
+  },
+  "live_requests_during_preparation": 0,
+  "payload_sha256": "e34d598f35ddd27392d8cb0c3126eba41616c0594d5e4297c1bb3087395ae718",
+  "second_evidence_exists": false,
+  "second_guard_exists": false
+}

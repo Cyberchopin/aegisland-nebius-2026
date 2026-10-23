@@ -1,0 +1,475 @@
+{
+  "added_path_count": 61,
+  "base_head": "efd35cac2fbcfb8e24c0ef9d1112ae6688bfa328",
+  "branch": "codex-b/stage-b1-nebius",
+  "changed_path_count": 63,
+  "changed_paths": [
+    ".github/workflows/tests.yml",
+    ".gitignore",
+    "LICENSE",
+    "README.md",
+    "THIRD_PARTY_NOTICES.md",
+    "docs/B3_FAILURE_ANALYSIS.md",
+    "docs/B4_REASONING_REMEDIATION.md",
+    "docs/LIVE_API_GATE.md",
+    "docs/MODEL_EVALUATION.md",
+    "docs/NEBIUS_READINESS.md",
+    "docs/PUBLICATION_AUDIT.md",
+    "docs/PUBLICATION_PLAN.md",
+    "docs/TRACE_READER_CONTRACT.md",
+    "docs/submission/DEMO_SCRIPT.md",
+    "docs/submission/DEVPOST_DRAFT.md",
+    "docs/submission/EVIDENCE_SUMMARY.md",
+    "docs/submission/LICENSE_VERIFICATION.md",
+    "docs/submission/README.md",
+    "docs/submission/SCREENSHOTS_PLAN.md",
+    "docs/submission/SUBMISSION_CHECKLIST.md",
+    "evaluation/attempt003_preparation/candidate.json",
+    "evaluation/attempt003_preparation/offline_tests.json",
+    "evaluation/b3/failure_analysis.json",
+    "evaluation/b3/offline_tests.json",
+    "evaluation/b4/offline_tests.json",
+    "evaluation/b4/research_and_analysis.json",
+    "evaluation/publication_audit/file_manifest.json",
+    "evaluation/publication_audit/verification.json",
+    "evaluation/results/live_attempt_002_consumed.json",
+    "evaluation/results/live_attempt_003_consumed.json",
+    "evaluation/results/live_attempt_consumed.json",
+    "evaluation/results/live_smoke.json",
+    "evaluation/results/live_smoke_002.json",
+    "evaluation/results/live_smoke_003.json",
+    "evaluation/results/live_verification_gate.json",
+    "evaluation/results/local_tests.json",
+    "evaluation/results/offline_evaluation.json",
+    "evaluation/results/offline_preflight.json",
+    "evaluation/results/offline_settings_audit.json",
+    "evaluation/results/resume_readiness.json",
+    "evaluation/results/second_attempt_preparation.json",
+    "evaluation/scenarios.json",
+    "evaluation/submission_preparation/verification.json",
+    "evaluation/traces/approval_conflict.jsonl",
+    "evaluation/traces/approved_landing.jsonl",
+    "evaluation/traces/expired_low_light.jsonl",
+    "evaluation/traces/missing_flags.jsonl",
+    "evaluation/traces/rejected_intrusion.jsonl",
+    "evaluation/traces/ungated_execution.jsonl",
+    "live_smoke.py",
+    "live_smoke_second.py",
+    "live_smoke_third.py",
+    "model_evaluation.py",
+    "nebius_review.py",
+    "run_local_checks.py",
+    "scripts/demo_runbook.py",
+    "tests/fixtures/review_outputs_b3.json",
+    "tests/test_b3_diagnostics.py",
+    "tests/test_b4_reasoning.py",
+    "tests/test_nebius_review.py",
+    "tests/test_second_attempt.py",
+    "tests/test_stage_b2.py",
+    "tests/test_third_attempt.py"
+  ],
+  "complete_tree_file_count": 66,
+  "files": [
+    {
+      "mode": "0644",
+      "path": ".github/workflows/tests.yml",
+      "sha256": "45b3274712da9991eac6ea7d5c048014ed95f254d4551c9ae2f72677edf20c45",
+      "status": "modified"
+    },
+    {
+      "mode": "0644",
+      "path": ".gitignore",
+      "sha256": "a28a09a9bcc3aad98c8983756e5e356f2155aebb39d45792015c1731a3c4fc9c",
+      "status": "added"
+    },
+    {
+      "mode": "0644",
+      "path": "LICENSE",
+      "sha256": "0e992f8e41b39b7c7251ef1ae0ac221bf8c38e5b272162a109b533119556b01e",
+      "status": "added"
+    },
+    {
+      "mode": "0644",
+      "path": "README.md",
+      "sha256": "ed7388838db75f672ab60435d82b54181fbe60e3790a4062f319556dd337a09f",
+      "status": "modified"
+    },
+    {
+      "mode": "0644",
+      "path": "THIRD_PARTY_NOTICES.md",
+      "sha256": "bb86a5313e2f95b68d55e464d78fac24be64c156bfb32f369290ce12ba80c3c5",
+      "status": "added"
+    },
+    {
+      "mode": "0644",
+      "path": "docs/B3_FAILURE_ANALYSIS.md",
+      "sha256": "ff50fbc7d565a1ef5e5df0f7cfbfd72ae9391a77092fca2c10f0ccd81da076a2",
+      "status": "added"
+    },
+    {
+      "mode": "0644",
+      "path": "docs/B4_REASONING_REMEDIATION.md",
+      "sha256": "1e94887f284eb0eb0f7b21502db90c79b1db30d77eb54733d907b8bee4bd6526",
+      "status": "added"
+    },
+    {
+      "mode": "0644",
+      "path": "docs/LIVE_API_GATE.md",
+      "sha256": "a4f7888e50ac45be3355a22cc93f884cc73e7b8b801acf032aac9200b134e87b",
+      "status": "added"
+    },
+    {
+      "mode": "0644",
+      "path": "docs/MODEL_EVALUATION.md",
+      "sha256": "bfefa62b1fdb7f4544ee51de5385d3683764944b9fe7b2a309c255ca8211b5ed",
+      "status": "added"
+    },
+    {
+      "mode": "0644",
+      "path": "docs/NEBIUS_READINESS.md",
+      "sha256": "107e0b64499fb8d287ca30cfc1dc5c1743b31a7a1fb4386ba793dbaca5c79d4a",
+      "status": "added"
+    },
+    {
+      "mode": "0644",
+      "path": "docs/PUBLICATION_AUDIT.md",
+      "sha256": "f45f5bcceaa2127a8a991a1a042b1cd22f9f603cbb1f1755d9a3af624743e368",
+      "status": "added"
+    },
+    {
+      "mode": "0644",
+      "path": "docs/PUBLICATION_PLAN.md",
+      "sha256": "cd213d7045039bd8f02cc4afa2a4e9474b5bfa4ef2bbde0ddcce1983bfd47ce3",
+      "status": "added"
+    },
+    {
+      "mode": "0644",
+      "path": "docs/TRACE_READER_CONTRACT.md",
+      "sha256": "1b5e8be1ef7cb30ecc165cc99ef91a0a90a1022bde0cb0129fb575e645887ff2",
+      "status": "added"
+    },
+    {
+      "mode": "0644",
+      "path": "docs/submission/DEMO_SCRIPT.md",
+      "sha256": "f4a83e0129536f7e0f3940c9d8640a3c9c1de4c59724b21052473f8f6bb925ef",
+      "status": "added"
+    },
+    {
+      "mode": "0644",
+      "path": "docs/submission/DEVPOST_DRAFT.md",
+      "sha256": "21c4a1818479721409770b1e09b1b6520c88391cca8ba187198804c0fb2d8dc4",
+      "status": "added"
+    },
+    {
+      "mode": "0644",
+      "path": "docs/submission/EVIDENCE_SUMMARY.md",
+      "sha256": "593c9f602e8aeef08c01d0aa84e8d079f57cb1ddf6334f39b41f22d705d2ea7b",
+      "status": "added"
+    },
+    {
+      "mode": "0644",
+      "path": "docs/submission/LICENSE_VERIFICATION.md",
+      "sha256": "ae27541864d36fa6fbcd79d986e60bbde17cbbc0419687abc46e6f8560838919",
+      "status": "added"
+    },
+    {
+      "mode": "0644",
+      "path": "docs/submission/README.md",
+      "sha256": "442c1fbb60ff8c9f01b6ed4de7129f80f73126530f21c9e401d5f8b03eb1408e",
+      "status": "added"
+    },
+    {
+      "mode": "0644",
+      "path": "docs/submission/SCREENSHOTS_PLAN.md",
+      "sha256": "6a7c892557a4fcb2caa778d5738cd1d296eff0e6ce5e99a7d46082da0dcaa82f",
+      "status": "added"
+    },
+    {
+      "mode": "0644",
+      "path": "docs/submission/SUBMISSION_CHECKLIST.md",
+      "sha256": "13c8185eed2695c5c1ae2f066600f83711730d43b5903af28b60097cb9f1dca2",
+      "status": "added"
+    },
+    {
+      "mode": "0644",
+      "path": "evaluation/attempt003_preparation/candidate.json",
+      "sha256": "92eef61f657f9d913df754ecff8025b050cbd85b2958656c0c2bf4d373458b01",
+      "status": "added"
+    },
+    {
+      "mode": "0644",
+      "path": "evaluation/attempt003_preparation/offline_tests.json",
+      "sha256": "8f3353ec3de1a09e2657a3a303a9d27bf3adc73c348dbdf9931f44db93b54c05",
+      "status": "added"
+    },
+    {
+      "mode": "0644",
+      "path": "evaluation/b3/failure_analysis.json",
+      "sha256": "7172c0557132de0882e1b6df010a6254984cc0a8fd5dd537150c521f90b23f5d",
+      "status": "added"
+    },
+    {
+      "mode": "0644",
+      "path": "evaluation/b3/offline_tests.json",
+      "sha256": "4a4c94175892b710c5231025268bae1ca9500ff9ab04f2fc3130210f095e0d67",
+      "status": "added"
+    },
+    {
+      "mode": "0644",
+      "path": "evaluation/b4/offline_tests.json",
+      "sha256": "09ce34e9ff6acfd4b0e9f12e0149dc9cb2df3df48aa79862c2921566789ce386",
+      "status": "added"
+    },
+    {
+      "mode": "0644",
+      "path": "evaluation/b4/research_and_analysis.json",
+      "sha256": "0f67c1cda1be69d6d7a91cc96f4057296921a43b4e59ca77aa6199411bdad75f",
+      "status": "added"
+    },
+    {
+      "hash_exclusion_reason": "mutually_referencing_audit_output",
+      "mode": "0644",
+      "path": "evaluation/publication_audit/file_manifest.json",
+      "sha256": null,
+      "status": "added"
+    },
+    {
+      "hash_exclusion_reason": "mutually_referencing_audit_output",
+      "mode": "0644",
+      "path": "evaluation/publication_audit/verification.json",
+      "sha256": null,
+      "status": "added"
+    },
+    {
+      "mode": "0644",
+      "path": "evaluation/results/live_attempt_002_consumed.json",
+      "sha256": "143957b50213325dc33a0cfdc1c03ed6facec33a32e444f6a2992528b13de65f",
+      "status": "added"
+    },
+    {
+      "mode": "0644",
+      "path": "evaluation/results/live_attempt_003_consumed.json",
+      "sha256": "143957b50213325dc33a0cfdc1c03ed6facec33a32e444f6a2992528b13de65f",
+      "status": "added"
+    },
+    {
+      "mode": "0644",
+      "path": "evaluation/results/live_attempt_consumed.json",
+      "sha256": "143957b50213325dc33a0cfdc1c03ed6facec33a32e444f6a2992528b13de65f",
+      "status": "added"
+    },
+    {
+      "mode": "0644",
+      "path": "evaluation/results/live_smoke.json",
+      "sha256": "b50107f155776362c51d32c3674633529a4c9cab9f2270e61a486b7dfba163d0",
+      "status": "added"
+    },
+    {
+      "mode": "0644",
+      "path": "evaluation/results/live_smoke_002.json",
+      "sha256": "399fe81ebe1a39a074359867f47ec17863d505da1cce320e0d6c9511944e1d36",
+      "status": "added"
+    },
+    {
+      "mode": "0644",
+      "path": "evaluation/results/live_smoke_003.json",
+      "sha256": "61805c7c375c0b2196cfaa07b94a5a6db14e51ba08fbcb3e89fa5150a10e2460",
+      "status": "added"
+    },
+    {
+      "mode": "0644",
+      "path": "evaluation/results/live_verification_gate.json",
+      "sha256": "6d69122f7cbf3afebefdef6e863359046b01f707b800c0be99502a40b382a50f",
+      "status": "added"
+    },
+    {
+      "mode": "0644",
+      "path": "evaluation/results/local_tests.json",
+      "sha256": "ee1c1f8db9f4a65c3f2d35b0d95fe5d5d25e6a51a41000a382d8ede94bb9c6ff",
+      "status": "added"
+    },
+    {
+      "mode": "0644",
+      "path": "evaluation/results/offline_evaluation.json",
+      "sha256": "39173c2639f7846d01bfdc2448d6fbe72ead89a027eaf1cb69559fcb7fcdf9c1",
+      "status": "added"
+    },
+    {
+      "mode": "0644",
+      "path": "evaluation/results/offline_preflight.json",
+      "sha256": "d8ac023734e64d8861cc5f61d10d09a6d3b5d679d2268c53abdbdf7b32c3211a",
+      "status": "added"
+    },
+    {
+      "mode": "0644",
+      "path": "evaluation/results/offline_settings_audit.json",
+      "sha256": "ed95252ba585372c46afc842d16a71c037054240e3889109e0a364234d1cad9f",
+      "status": "added"
+    },
+    {
+      "mode": "0644",
+      "path": "evaluation/results/resume_readiness.json",
+      "sha256": "1673ef825e00b1c8156f1d44741b1759e347d79d6957323abcca146e56f3953f",
+      "status": "added"
+    },
+    {
+      "mode": "0644",
+      "path": "evaluation/results/second_attempt_preparation.json",
+      "sha256": "cc903f66604f7b3fe5f9fb006b5f601ccba0cfcf6a117479d0abe6993aa716f1",
+      "status": "added"
+    },
+    {
+      "mode": "0644",
+      "path": "evaluation/scenarios.json",
+      "sha256": "13c1ee4f33f8708f720093d773d19cf91cca19f96b2c2c4a2d848534bfa19203",
+      "status": "added"
+    },
+    {
+      "mode": "0644",
+      "path": "evaluation/submission_preparation/verification.json",
+      "sha256": "63cb01d61bf762863c707ecc445f62f6ae84efeb3ce0669c8eb71912eed1111b",
+      "status": "added"
+    },
+    {
+      "mode": "0644",
+      "path": "evaluation/traces/approval_conflict.jsonl",
+      "sha256": "9ca93651e4a52ed889e3463c5a1ece3181e65a6656ebe0c9c2b6d21fcfa10b37",
+      "status": "added"
+    },
+    {
+      "mode": "0644",
+      "path": "evaluation/traces/approved_landing.jsonl",
+      "sha256": "ea887b7abe024cb35f5fc6f2c503d4ed6d68ab14fd6d78e67b47ee13d09d9e0e",
+      "status": "added"
+    },
+    {
+      "mode": "0644",
+      "path": "evaluation/traces/expired_low_light.jsonl",
+      "sha256": "97fa185b3d6861a8acdac250bffb25b8710820e725f95ae5c967998c14db27f4",
+      "status": "added"
+    },
+    {
+      "mode": "0644",
+      "path": "evaluation/traces/missing_flags.jsonl",
+      "sha256": "5b2403d2b27c2aa7d633626b78fa2cddafb427e601837ebaaa5a71be4ec523d8",
+      "status": "added"
+    },
+    {
+      "mode": "0644",
+      "path": "evaluation/traces/rejected_intrusion.jsonl",
+      "sha256": "7cc5e6a258135c1bc4e5a87d1674913cbbe3ebdcdb7e464168114455b34be0ec",
+      "status": "added"
+    },
+    {
+      "mode": "0644",
+      "path": "evaluation/traces/ungated_execution.jsonl",
+      "sha256": "4760fe7a6a9c6cf25b53bec95e1ae07fdc332f7ec5eb3c602bc4b11a25dc2827",
+      "status": "added"
+    },
+    {
+      "mode": "0644",
+      "path": "live_smoke.py",
+      "sha256": "15881ad203590e2c6e250580ace5221f64d16c0756dc5b5485fb826fca18d83e",
+      "status": "added"
+    },
+    {
+      "mode": "0644",
+      "path": "live_smoke_second.py",
+      "sha256": "8f912aaf2c4cea159bb986a3fca511703e35a34f67299a8a79acc437bf668388",
+      "status": "added"
+    },
+    {
+      "mode": "0644",
+      "path": "live_smoke_third.py",
+      "sha256": "5be258cbdb728919df1ede573543e57145b4339317870eeeb8134a17af0ccc30",
+      "status": "added"
+    },
+    {
+      "mode": "0644",
+      "path": "model_evaluation.py",
+      "sha256": "0c354a299bbe2604a503c5d7023e44236bcbd87b92f20243cfc9246b08102a61",
+      "status": "added"
+    },
+    {
+      "mode": "0644",
+      "path": "nebius_review.py",
+      "sha256": "b276bad8a8f64a01691baa6c5d396b8a129971a11b6d526a7774d344d1f15f7b",
+      "status": "added"
+    },
+    {
+      "mode": "0644",
+      "path": "run_local_checks.py",
+      "sha256": "91f11ba5cf7621963e12a526c2a6782919f7075e4999274808081e68c42521d5",
+      "status": "added"
+    },
+    {
+      "mode": "0755",
+      "path": "scripts/demo_runbook.py",
+      "sha256": "a0b303ffa6efb1cee740c29f341d2485803579ab21b6454133b2fe3558c7afc5",
+      "status": "added"
+    },
+    {
+      "mode": "0644",
+      "path": "tests/fixtures/review_outputs_b3.json",
+      "sha256": "fe859099a954a6f1c67ca1c20158b7d1d98158020fe9ca944387f4a19cf54c94",
+      "status": "added"
+    },
+    {
+      "mode": "0644",
+      "path": "tests/fixtures/synthetic_trace.jsonl",
+      "sha256": "52fea35bd961fa36985d500a414295d251972f756e65f29b93685983b917cbea",
+      "status": "unchanged"
+    },
+    {
+      "mode": "0644",
+      "path": "tests/test_b3_diagnostics.py",
+      "sha256": "e71a09c7d78ff513d4bea5ee846750ad9686f8628a43c5f75f39a0d46d35fc98",
+      "status": "added"
+    },
+    {
+      "mode": "0644",
+      "path": "tests/test_b4_reasoning.py",
+      "sha256": "7c95cd56cb634087064459111d0af92bc338cf9c9b90997ab458049f9335005c",
+      "status": "added"
+    },
+    {
+      "mode": "0644",
+      "path": "tests/test_nebius_review.py",
+      "sha256": "70e6b37b8c551057f787b66457b77764e25b1ea62734ce5617a78eb652c35c1d",
+      "status": "added"
+    },
+    {
+      "mode": "0644",
+      "path": "tests/test_second_attempt.py",
+      "sha256": "664d75c23883bf2585577044d498e4321a93073a514cc5cd9afea26a08cdda02",
+      "status": "added"
+    },
+    {
+      "mode": "0644",
+      "path": "tests/test_stage_b2.py",
+      "sha256": "69bd6af74ae5186d608202eefc5db9f9827b5ddaa806eba30b6f4b8d5a523e3b",
+      "status": "added"
+    },
+    {
+      "mode": "0644",
+      "path": "tests/test_third_attempt.py",
+      "sha256": "5cb0ea5aca3a0a55707679d7545e0d59d26d4885a38d232ea91972be9e136dcf",
+      "status": "added"
+    },
+    {
+      "mode": "0644",
+      "path": "tests/test_trace_reader.py",
+      "sha256": "adcde5046473b15d336fa51d936d141f00e0b75db4b04ba142400858033a6618",
+      "status": "unchanged"
+    },
+    {
+      "mode": "0644",
+      "path": "trace_reader.py",
+      "sha256": "604622671a03ee709f8f2b4e6fea5a76a89dd294f5b8dae4a43ab78a20f01b15",
+      "status": "unchanged"
+    }
+  ],
+  "format_version": 1,
+  "modified_path_count": 2,
+  "unchanged_path_count": 3
+}

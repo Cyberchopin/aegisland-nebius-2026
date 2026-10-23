@@ -17,4 +17,10 @@ jobs:
         with:
           python-version: '3.12'
       - name: Run unittest
-        run: python -m unittest discover -s tests -v
+        run: python -B -m run_local_checks
+      - name: Preserve offline test and evaluation evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: nebius-offline-evidence
+          path: evaluation/results/*.json

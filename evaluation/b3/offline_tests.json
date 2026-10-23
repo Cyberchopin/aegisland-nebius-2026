@@ -1,0 +1,37 @@
+{
+  "errors": [],
+  "existing_evidence_sha256": {
+    "evaluation/results/live_attempt_002_consumed.json": "143957b50213325dc33a0cfdc1c03ed6facec33a32e444f6a2992528b13de65f",
+    "evaluation/results/live_attempt_consumed.json": "143957b50213325dc33a0cfdc1c03ed6facec33a32e444f6a2992528b13de65f",
+    "evaluation/results/live_smoke.json": "b50107f155776362c51d32c3674633529a4c9cab9f2270e61a486b7dfba163d0",
+    "evaluation/results/live_smoke_002.json": "399fe81ebe1a39a074359867f47ec17863d505da1cce320e0d6c9511944e1d36",
+    "evaluation/results/live_verification_gate.json": "6d69122f7cbf3afebefdef6e863359046b01f707b800c0be99502a40b382a50f",
+    "evaluation/results/local_tests.json": "ee1c1f8db9f4a65c3f2d35b0d95fe5d5d25e6a51a41000a382d8ede94bb9c6ff",
+    "evaluation/results/offline_evaluation.json": "39173c2639f7846d01bfdc2448d6fbe72ead89a027eaf1cb69559fcb7fcdf9c1",
+    "evaluation/results/offline_preflight.json": "d8ac023734e64d8861cc5f61d10d09a6d3b5d679d2268c53abdbdf7b32c3211a",
+    "evaluation/results/offline_settings_audit.json": "ed95252ba585372c46afc842d16a71c037054240e3889109e0a364234d1cad9f",
+    "evaluation/results/resume_readiness.json": "1673ef825e00b1c8156f1d44741b1759e347d79d6957323abcca146e56f3953f",
+    "evaluation/results/second_attempt_preparation.json": "cc903f66604f7b3fe5f9fb006b5f601ccba0cfcf6a117479d0abe6993aa716f1"
+  },
+  "existing_evidence_unchanged": true,
+  "failures": [],
+  "format_version": 1,
+  "live_api_requests": 0,
+  "python_version": "3.12.3",
+  "skipped": [],
+  "source_sha256": {
+    "live_smoke.py": "11554152ec1f7706e03b708245ba6c40d026e6fb3fe32c3dadfc4e9cd496640c",
+    "live_smoke_second.py": "8f912aaf2c4cea159bb986a3fca511703e35a34f67299a8a79acc437bf668388",
+    "model_evaluation.py": "0c354a299bbe2604a503c5d7023e44236bcbd87b92f20243cfc9246b08102a61",
+    "nebius_review.py": "5036c7106c2597bea49d6017b0b92f26ffe970e6fd2b7b9a37d4f9c6bc264767",
+    "run_local_checks.py": "91f11ba5cf7621963e12a526c2a6782919f7075e4999274808081e68c42521d5",
+    "tests/test_b3_diagnostics.py": "e71a09c7d78ff513d4bea5ee846750ad9686f8628a43c5f75f39a0d46d35fc98",
+    "tests/test_nebius_review.py": "70e6b37b8c551057f787b66457b77764e25b1ea62734ce5617a78eb652c35c1d",
+    "tests/test_second_attempt.py": "664d75c23883bf2585577044d498e4321a93073a514cc5cd9afea26a08cdda02",
+    "tests/test_stage_b2.py": "69bd6af74ae5186d608202eefc5db9f9827b5ddaa806eba30b6f4b8d5a523e3b",
+    "tests/test_trace_reader.py": "adcde5046473b15d336fa51d936d141f00e0b75db4b04ba142400858033a6618",
+    "trace_reader.py": "604622671a03ee709f8f2b4e6fea5a76a89dd294f5b8dae4a43ab78a20f01b15"
+  },
+  "successful": true,
+  "tests_run": 62
+}
