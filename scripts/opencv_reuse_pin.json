@@ -1,0 +1,16 @@
+{
+  "repository": "Cyberchopin/aegisland-opencv-2026",
+  "revision": "de93d5a25de42f00546a62c9e728ee1d8da6c5b6",
+  "blobs": {
+    "evidence/a1/final/gps_loss_low_light/provenance.json": "52c1f0a0b6ec6940cdfbde0eb3279abb323c6edd",
+    "evidence/a1/final/gps_loss_low_light/trace.jsonl": "e5d60e97a38c686edbde5d9513f7e87bf634e526",
+    "evidence/a1/final/low_battery_intrusion/provenance.json": "cc6a92e7bde3d7e3a7b4d027ba3a733b7b9cbd40",
+    "evidence/a1/final/low_battery_intrusion/trace.jsonl": "564b58b13e4a2ddd1c49fcffdb56cf53dcacbecb",
+    "evidence/a1/final/nominal/provenance.json": "cb7b1ec86d9f23a35123cd3afedfad37da4193ea",
+    "evidence/a1/final/nominal/trace.jsonl": "f7d83257773925f6cd204c8889def2b3f7952b52",
+    "submission/devpost-final-materials-20261024/media/gps_loss_low_light.h264.mp4": "13efed593a57702b6d826dca656f9f2dc343e469",
+    "submission/devpost-final-materials-20261024/media/low_battery_intrusion.h264.mp4": "1b9071b82951b255cc4c602ac5404f4ba33bd34a",
+    "submission/devpost-final-materials-20261024/media/manifest.json": "fecb83c5db996fe0803d3d27463e3e3c494b6ae6",
+    "submission/devpost-final-materials-20261024/media/nominal.h264.mp4": "f90f370ab69b15579ad87d7af4f066b0829ae398"
+  }
+}

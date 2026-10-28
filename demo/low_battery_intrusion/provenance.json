@@ -1,0 +1,20 @@
+{
+  "core_commit": "eda23d3ea646e8943287703c07a91e9a3b2909fb",
+  "format_version": 1,
+  "kind": "sanitized_provenance_projection",
+  "original_blob_sha1": "cc6a92e7bde3d7e3a7b4d027ba3a733b7b9cbd40",
+  "original_sha256": "d8fbffd73a15c4b715a36b63c174f186f79da70a37abcf9e037bcd723c2dac43",
+  "saved_status": "PASS",
+  "scope": "Saved synthetic simulation; environment and filesystem metadata omitted.",
+  "sha256": {
+    "trace.jsonl": "82c40c6f132c9191ea5e8d0a03004b73d7a4092311714b902796827ec91d8a98"
+  },
+  "source_path": "evidence/a1/final/low_battery_intrusion/provenance.json",
+  "source_repository": "Cyberchopin/aegisland-opencv-2026",
+  "source_revision": "de93d5a25de42f00546a62c9e728ee1d8da6c5b6",
+  "validation": {
+    "all_commands_simulation_only": true,
+    "decoded_video_frames": 90,
+    "trace_events": 90
+  }
+}

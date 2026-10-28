@@ -1,0 +1,10 @@
+[
+  {
+    "output": "evaluation/results",
+    "rejected_before_tests": true
+  },
+  {
+    "output": "demo",
+    "rejected_before_tests": true
+  }
+]

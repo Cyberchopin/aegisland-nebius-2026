@@ -1,0 +1,19 @@
+{
+  "historical_files_unchanged": 29,
+  "reproduced_demo_files": 12,
+  "reproduced_paths": [
+    "index.html",
+    "reuse_manifest.json",
+    "review_data.json",
+    "gps_loss_low_light/provenance.json",
+    "gps_loss_low_light/replay.mp4",
+    "gps_loss_low_light/trace.jsonl",
+    "low_battery_intrusion/provenance.json",
+    "low_battery_intrusion/replay.mp4",
+    "low_battery_intrusion/trace.jsonl",
+    "nominal/provenance.json",
+    "nominal/replay.mp4",
+    "nominal/trace.jsonl"
+  ],
+  "record_scope": "Original local reproducibility snapshot before public provenance projection; originals retained locally."
+}

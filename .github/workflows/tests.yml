@@ -10,17 +10,22 @@ permissions:
 
 jobs:
   unittest:
-    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
       - name: Run unittest
-        run: python -B -m run_local_checks
+        run: python -B -m run_local_checks --output-dir runs/ci-checks
+      - name: Verify bundled replay and reviews
+        run: python -B scripts/check_workbench.py --directory demo
       - name: Preserve offline test and evaluation evidence
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: nebius-offline-evidence
-          path: evaluation/results/*.json
+          name: nebius-offline-evidence-${{ matrix.os }}
+          path: runs/ci-checks/*.json

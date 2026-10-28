@@ -1,0 +1,57 @@
+{
+  "source_revision": "de93d5a25de42f00546a62c9e728ee1d8da6c5b6",
+  "files": [
+    {
+      "source_path": "evidence/a1/final/low_battery_intrusion/trace.jsonl",
+      "output_path": "low_battery_intrusion/trace.jsonl",
+      "sha256": "82c40c6f132c9191ea5e8d0a03004b73d7a4092311714b902796827ec91d8a98"
+    },
+    {
+      "source_path": "submission/devpost-final-materials-20261024/media/low_battery_intrusion.h264.mp4",
+      "output_path": "low_battery_intrusion/replay.mp4",
+      "sha256": "9f0fc2661c8735272cdf9d35316e151f579ca8e6a2bced77bbd076a9546ebe63"
+    },
+    {
+      "source_path": "evidence/a1/final/low_battery_intrusion/provenance.json",
+      "output_path": "low_battery_intrusion/provenance.json",
+      "sha256": "58104b1f5e4bd7cd4ffa99d31054cf64e0395a0abd7f901868e460f16c826b64",
+      "kind": "sanitized_provenance_projection",
+      "original_sha256": "d8fbffd73a15c4b715a36b63c174f186f79da70a37abcf9e037bcd723c2dac43"
+    },
+    {
+      "source_path": "evidence/a1/final/gps_loss_low_light/trace.jsonl",
+      "output_path": "gps_loss_low_light/trace.jsonl",
+      "sha256": "a47a9606d7b55dfb0ad906ac81e59f16c5a416e50038d28a9a828146288661f9"
+    },
+    {
+      "source_path": "submission/devpost-final-materials-20261024/media/gps_loss_low_light.h264.mp4",
+      "output_path": "gps_loss_low_light/replay.mp4",
+      "sha256": "6e8723e7b97528adf21e85a24a37150aa6da78c545883e4476b6f9f6b8eb83a1"
+    },
+    {
+      "source_path": "evidence/a1/final/gps_loss_low_light/provenance.json",
+      "output_path": "gps_loss_low_light/provenance.json",
+      "sha256": "ca5ae7084585e00d92c5b0fd2203eba695068b138c3ad8e6d43bfe9fbe306653",
+      "kind": "sanitized_provenance_projection",
+      "original_sha256": "1240aa900bca1ba1c5852ad00acce8593f7c9fbb3f6c86ab96fb8df321aa9af9"
+    },
+    {
+      "source_path": "evidence/a1/final/nominal/trace.jsonl",
+      "output_path": "nominal/trace.jsonl",
+      "sha256": "3e1839f54592481ef5d05b37ed4341382cbcd729a918abf6d4c025a2e5186f3c"
+    },
+    {
+      "source_path": "submission/devpost-final-materials-20261024/media/nominal.h264.mp4",
+      "output_path": "nominal/replay.mp4",
+      "sha256": "613471adc187b76241f632febd7869221e3a82f4c76ec3607d2a0caccd06dc4d"
+    },
+    {
+      "source_path": "evidence/a1/final/nominal/provenance.json",
+      "output_path": "nominal/provenance.json",
+      "sha256": "56153afed2e9d264dc16f78f6c4987e718e3857a65b252ed3efcc341034fa48d",
+      "kind": "sanitized_provenance_projection",
+      "original_sha256": "ff1c359abaa0ce91366cfe770c4224c53001449ac33e57b5dfeabf5801b0c46c"
+    }
+  ],
+  "scope": "Owner-authorized reuse; prior simulation work, not new NVIDIA inference."
+}
