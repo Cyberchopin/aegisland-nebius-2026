@@ -1,0 +1,20 @@
+{
+  "core_commit": "eda23d3ea646e8943287703c07a91e9a3b2909fb",
+  "format_version": 1,
+  "kind": "sanitized_provenance_projection",
+  "original_blob_sha1": "52c1f0a0b6ec6940cdfbde0eb3279abb323c6edd",
+  "original_sha256": "1240aa900bca1ba1c5852ad00acce8593f7c9fbb3f6c86ab96fb8df321aa9af9",
+  "saved_status": "PASS",
+  "scope": "Saved synthetic simulation; environment and filesystem metadata omitted.",
+  "sha256": {
+    "trace.jsonl": "a47a9606d7b55dfb0ad906ac81e59f16c5a416e50038d28a9a828146288661f9"
+  },
+  "source_path": "evidence/a1/final/gps_loss_low_light/provenance.json",
+  "source_repository": "Cyberchopin/aegisland-opencv-2026",
+  "source_revision": "de93d5a25de42f00546a62c9e728ee1d8da6c5b6",
+  "validation": {
+    "all_commands_simulation_only": true,
+    "decoded_video_frames": 80,
+    "trace_events": 80
+  }
+}

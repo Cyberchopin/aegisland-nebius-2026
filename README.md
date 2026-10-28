@@ -2,6 +2,32 @@
 
 Nebius × NVIDIA Global AI Hackathon 2026 submission repository.
 
+## New: source-linked simulation review workbench
+
+The bundled workbench combines three existing OpenCV simulation replays with 230
+validated original events, key-moment bookmarks, video frame seeking, source-line
+inspection and downloadable deterministic review results. This is prior simulation
+evidence connected to a new review interface, not fresh NVIDIA inference.
+
+From this repository's folder, launch the demo with:
+
+```sh
+python -B scripts/serve_review_workbench.py --directory demo --port 8090
+```
+
+Open http://127.0.0.1:8090/ . On Windows, double-click `Start_Demo.cmd` to select
+the correct working folder automatically. No API key or installation is required.
+Video and traces are included in `demo/`; this is a local preview.
+
+See [reuse, build instructions and next milestones](docs/REVIEW_WORKBENCH.md).
+The builder verifies pinned source blobs and provenance hashes; no external core
+code is copied or imported. Imported owner-provided media and records remain
+in `demo/` and retain their original rights boundaries; the integration MIT
+license does not grant a new license over those imported records or media.
+Trace and video bytes are preserved. Provenance downloads are public summaries
+with original source identities; private paths, commands and environment metadata
+are omitted from those summaries.
+
 **Real Nebius-hosted NVIDIA inference succeeded. Live citation-grounded review
 remains `not_verified`.** This repository provides a working offline evidence
 reader, deterministic review baseline, bounded provider adapter and preserved
@@ -26,8 +52,19 @@ network/live provider calls, writes JSON plus `demo_report.html` outside this
 repository, and checks historical evidence hashes before and after execution.
 Open the generated HTML locally for screenshots; it is not a hosted application.
 
-Do not rerun historical smoke commands or reset consumed guards. Do not use
-`run_local_checks` with its default paths: it overwrites historical result JSON.
+Do not rerun historical smoke commands or reset consumed guards. The current
+check runner refuses existing output folders and protects historical evidence.
+Use the same check entry point as CI:
+
+```sh
+python -B -m run_local_checks --output-dir runs/my-check-01
+python -B scripts/check_workbench.py --directory demo
+```
+
+Choose a fresh results folder for each run. The check runner permits exact
+127.0.0.1 connections for the video test and blocks external connections.
+CI is configured for Windows and Ubuntu; local verification does not establish
+that the hosted GitHub jobs have already run.
 Fresh offline evaluation can be written with:
 
 ```sh
@@ -56,6 +93,7 @@ and citation validation. Six synthetic scenarios compare them reproducibly.
 | Attempt 003 | HTTP 200, returned same model; 324 input / 1,024 output tokens; 6,450.761 ms | All 1,024 output tokens were reasoning; finish `length`; review `not_verified` |
 | Synthetic evaluation | No-model baseline 6/6; first-event mock 1/6 | Constructed harness results, not NVIDIA accuracy |
 | B4 verification | 74 offline tests pass | No successful live review or model-quality benchmark |
+| Workbench release checks | 83 local tests pass; 230 stored reviews recomputed | Deterministic checks, not model accuracy; hosted CI pending publication |
 
 Model: `nvidia/nemotron-3-super-120b-a12b`.
 Successful runtime endpoint: `https://api.tokenfactory.nebius.com/v1/chat/completions`.
@@ -70,25 +108,29 @@ is enabled. Credentials remain environment-only and are never needed for the dem
 ## Evidence and submission materials
 
 - [Evidence table and artifact hashes](docs/submission/EVIDENCE_SUMMARY.md)
-- [Recording runbook and narration](docs/submission/DEMO_SCRIPT.md)
+- [Current recording plan](submission/VIDEO_PLAN_EN.md)
 - [Screenshot checklist](docs/submission/SCREENSHOTS_PLAN.md)
-- [Devpost draft](docs/submission/DEVPOST_DRAFT.md)
-- [Personal submission checklist](docs/submission/SUBMISSION_CHECKLIST.md)
+- [Current Devpost draft](submission/DEVPOST_COPY_EN.md)
+- [Current release status](RELEASE_STATUS.md)
 - [Readiness](docs/NEBIUS_READINESS.md), [B4 research](docs/B4_REASONING_REMEDIATION.md),
   [trace contract](docs/TRACE_READER_CONTRACT.md), [evaluation contract](docs/MODEL_EVALUATION.md)
 
-Video, screenshots and Devpost entry must be completed by the owner. Nothing
-has been deployed, pushed, merged or submitted by this preparation work.
+A workbench screenshot is included at `docs/assets/workbench-preview.jpg`.
+The updated video and Devpost entry still need owner completion. This branch
+provides a local test build; no deployment or Devpost update is implied. Historical
+documents under `docs/submission/` describe the earlier evidence-only snapshot.
 
 ## Provenance and license
 
 The separate [AegisLand core](https://github.com/Cyberchopin/aegisland-agentic-vision)
 provides the prior simulation/perception work; the referenced baseline is
-`eda23d3`. This competition repository does not import or copy core modules,
-model weights or core video assets. Its new contribution is the trace-review
-integration, synthetic evaluation, provider verification and failure diagnostics.
-All local trace fixtures are synthetic; no real core trace regression, hardware
-operation, flight certification, safety improvement or model speedup is claimed.
+`eda23d3`. No core module or model weight is imported or copied. The `demo/`
+folder bundles the owner's saved OpenCV simulation traces and display-video
+derivatives with their upstream identities. They are disclosed prior work.
+New contributions include the bounded trace-review integration, source-linked
+workbench, synthetic evaluation and provider/failure diagnostics.
+All traces are synthetic simulation; hardware operation, flight certification,
+safety improvement and model speedup are not established by this demo.
 
 This integration is [MIT licensed](LICENSE). The license does not cover external
 model/core/service rights. See [third-party boundaries](THIRD_PARTY_NOTICES.md)

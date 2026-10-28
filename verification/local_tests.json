@@ -1,0 +1,32 @@
+{
+  "errors": [],
+  "failures": [],
+  "format_version": 1,
+  "live_api_calls": 0,
+  "python_version": "3.12.6",
+  "skipped": [],
+  "source_sha256": {
+    "live_smoke.py": "15881ad203590e2c6e250580ace5221f64d16c0756dc5b5485fb826fca18d83e",
+    "live_smoke_second.py": "8f912aaf2c4cea159bb986a3fca511703e35a34f67299a8a79acc437bf668388",
+    "live_smoke_third.py": "5be258cbdb728919df1ede573543e57145b4339317870eeeb8134a17af0ccc30",
+    "model_evaluation.py": "0c354a299bbe2604a503c5d7023e44236bcbd87b92f20243cfc9246b08102a61",
+    "nebius_review.py": "7210c38cc831ad91c10567a4d10e5b896380e8de81fccf495fbb98f3e04ba735",
+    "run_local_checks.py": "9393d314bec559b6b127bd1fc7b29ffaa7cd8f320ec8c690ff8c2c75fd87f4d2",
+    "scripts\\build_review_workbench.py": "2bc05fbe6871b29711f8064ee3dfa92b3208b63ab663575da79123e6c8473785",
+    "scripts\\check_workbench.py": "a0e1a0136b97c487bb6319f195d8fc14d3986411fb0993ad387c57c9be9ba4eb",
+    "scripts\\demo_runbook.py": "a0b303ffa6efb1cee740c29f341d2485803579ab21b6454133b2fe3558c7afc5",
+    "scripts\\serve_review_workbench.py": "f4e512f91533681b1ef57d3db40aa88a60a302882b0063e67e01c653acf18943",
+    "tests\\test_b3_diagnostics.py": "e71a09c7d78ff513d4bea5ee846750ad9686f8628a43c5f75f39a0d46d35fc98",
+    "tests\\test_b4_reasoning.py": "7c95cd56cb634087064459111d0af92bc338cf9c9b90997ab458049f9335005c",
+    "tests\\test_local_check_runner.py": "611135ea44d1d199b7af67348a7b43008151752282a5aaaf9493a958ca2c362f",
+    "tests\\test_nebius_review.py": "70e6b37b8c551057f787b66457b77764e25b1ea62734ce5617a78eb652c35c1d",
+    "tests\\test_review_windows.py": "5559b5a351bbe94be9553ce2cb03e5aaaeced3972671e23bd118939227a9e54b",
+    "tests\\test_second_attempt.py": "664d75c23883bf2585577044d498e4321a93073a514cc5cd9afea26a08cdda02",
+    "tests\\test_stage_b2.py": "69bd6af74ae5186d608202eefc5db9f9827b5ddaa806eba30b6f4b8d5a523e3b",
+    "tests\\test_third_attempt.py": "5cb0ea5aca3a0a55707679d7545e0d59d26d4885a38d232ea91972be9e136dcf",
+    "tests\\test_trace_reader.py": "adcde5046473b15d336fa51d936d141f00e0b75db4b04ba142400858033a6618",
+    "trace_reader.py": "604622671a03ee709f8f2b4e6fea5a76a89dd294f5b8dae4a43ab78a20f01b15"
+  },
+  "successful": true,
+  "tests_run": 83
+}

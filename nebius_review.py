@@ -177,11 +177,20 @@ class NebiusProvider:
             self.metadata["elapsed_latency_ms"] = round((perf_counter() - started) * 1000, 3)
 
 
-def review(path, provider):
+def review(path, provider, *, line_window=None):
     summary = read_trace(path, include_records=True)
     if not summary["valid"] or not summary["input"]["hash_complete"]:
         raise ReviewError("Trace must pass validation with a complete hash", "trace_invalid")
     records = summary["records"]
+    if line_window is not None:
+        if (not isinstance(line_window, tuple) or len(line_window) != 2
+                or any(type(n) is not int for n in line_window)
+                or not 1 <= line_window[0] <= line_window[1]
+                or line_window[1] - line_window[0] >= 32
+                or line_window[1] > summary["counts"]["lines"]):
+            raise ReviewError("Window requires 1 through 32 existing source lines", "trace_bounds")
+        records = [entry for entry in records
+                   if line_window[0] <= entry["line"] <= line_window[1]]
     if not records or len(records) > 32:
         raise ReviewError("Review requires 1 through 32 accepted records; supply a bounded trace", "trace_bounds")
     # Explicit projection: arbitrary upstream fields and free-text reasons are not uploaded.

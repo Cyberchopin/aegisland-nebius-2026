@@ -1,0 +1,10 @@
+* text=auto
+*.py text eol=lf
+*.md text eol=lf
+*.yml text eol=lf
+*.cmd text eol=crlf
+# Evidence identities depend on exact bytes, including line endings.
+evaluation/** -text whitespace=cr-at-eol
+demo/** -text whitespace=cr-at-eol
+*.mp4 binary
+*.jpg binary

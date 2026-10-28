@@ -10,6 +10,7 @@ It does not grant rights in external projects, services, trademarks or model wei
 | NVIDIA Nemotron 3 Super | Hosted text inference via Nebius; no model weights or model code distributed | NVIDIA Nemotron Open Model License, separate from this repository's MIT license |
 | Nebius Token Factory | HTTP API and retained sanitized owner-run results | Account/service terms still apply |
 | Python | Standard-library imports | Python runtime license is separate; no runtime bundled |
+| Owner-provided OpenCV simulation assets in `demo/` | Saved traces, provenance and video display derivatives, pinned to `de93d5a` | Existing ownership and distribution rights retained; integration MIT license does not grant an additional license to these assets. See `demo/ASSET_RIGHTS.md` |
 | GitHub Actions | `actions/checkout@v4`, `actions/setup-python@v5`, `actions/upload-artifact@v4` references | Actions are fetched by CI; no action implementation bundled |
 
 [NVIDIA's model license](https://www.nvidia.com/en-us/agreements/enterprise-software/nvidia-nemotron-open-model-license/)
