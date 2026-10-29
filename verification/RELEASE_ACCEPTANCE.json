@@ -1,13 +1,14 @@
 {
   "local_date": "2026-10-27 America/Los_Angeles",
-  "checked_remote_main": "508238f37534926216e70cb412e0d7481d6a2a9d",
+  "checked_remote_main": "da0a2882b2126b4c67edb8b2329ce99b33075b50",
   "baseline_matches_remote_main": true,
   "local_ci_entrypoint": {
     "tests_run": 83,
     "successful": true,
     "errors": [],
     "failures": [],
-    "skipped": []
+    "skipped": [],
+    "record_scope": "Saved October 27 local result; verification/local_tests.json unchanged"
   },
   "demo_acceptance": {
     "scenarios": 3,
@@ -15,7 +16,8 @@
     "pinned_artifacts": 9,
     "historical_evidence_files_unchanged": 29,
     "unchanged_pinned_trace_video_artifacts": 6,
-    "public_provenance_projections": 3
+    "public_provenance_projections": 3,
+    "record_scope": "Saved 230-event recomputation; new checks recorded separately"
   },
   "output_protection": "existing and historical output destinations rejected before tests",
   "git_line_endings": "demo and evaluation byte preservation explicitly configured",
@@ -28,17 +30,72 @@
     "run_local_checks.py"
   ],
   "source_acquisition": "archive-based candidate; no Git metadata bundled",
-  "live_model_review": "not_verified",
-  "new_paid_calls": 0,
-  "hosted_ci": "pending_publication",
-  "remote_push": false,
+  "live_model_review": "attempt004_limited_single_review_verified",
+  "hosted_ci": {
+    "run_id": 40648963281,
+    "conclusion": "success",
+    "head_sha": "4ce68b01799f58f23b2c6019b5bb2f26d0b95d6f",
+    "scope": "Successful PR #2 head run, now included in main; not a separate merge-SHA run",
+    "url": "https://github.com/Cyberchopin/aegisland-nebius-2026/actions/runs/40648963281"
+  },
+  "remote_push": true,
   "devpost_updated": false,
   "remaining": [
     "Confirm chosen public distribution terms for imported owner-provided assets",
-    "Run actual GitHub Windows and Ubuntu jobs after branch publication",
     "Record updated submission video",
-    "Complete separately authorized live model citation verification before claiming success"
+    "Owner completes Devpost update and personal declarations"
   ],
-  "record_scope": "Local pre-publication acceptance snapshot; remote publication status is historical, see GitHub branch and PR.",
-  "public_provenance": "Allowlisted projection; no home paths, commands or environment overrides"
+  "record_scope": "Updated remote publication status; local 83-test and 230-event results remain saved historical evidence",
+  "public_provenance": "Allowlisted projection; no home paths, commands or environment overrides",
+  "saved_prepublication_context": {
+    "local_date": "2026-10-27 America/Los_Angeles",
+    "checked_remote_main": "508238f37534926216e70cb412e0d7481d6a2a9d",
+    "remote_push_by_acceptance_work": false
+  },
+  "status_checked_date": "2026-10-29 America/Los_Angeles",
+  "publication": {
+    "pull_request": 2,
+    "merged": true,
+    "main_commit": "da0a2882b2126b4c67edb8b2329ce99b33075b50"
+  },
+  "remote_push_scope": "Published by the completed PR #2 workflow; no push in Attempt 004 preparation",
+  "attempt004": {
+    "status": "limited_live_review_verified",
+    "request_count": 1,
+    "http_status": 200,
+    "model": "nvidia/nemotron-3-super-120b-a12b",
+    "finish_reason": "stop",
+    "citation_validation": "PASS",
+    "selected_line": 39,
+    "evidence_id": "c71390b01d39",
+    "usage_tokens": {
+      "input": 388,
+      "output": 40
+    },
+    "estimated_cost_usd": 0.0001524,
+    "cost_note": "Estimate only; not an invoice or spending cap.",
+    "scope": "One bounded review of two disclosed synthetic simulation records.",
+    "limitations": [
+      "Does not establish model accuracy.",
+      "Does not establish real flight or physical hardware operation.",
+      "Does not establish production safety.",
+      "Does not establish long-term online service reliability.",
+      "Hosted support for the requested reasoning setting remains unconfirmed."
+    ],
+    "historical_attempts_001_to_003": "Preserved unchanged.",
+    "public_summary": "verification/attempt004_public_summary.json"
+  },
+  "contribution_boundary": "OpenCV simulation/video/traces are disclosed prior work; source-linked workbench, bounded windows, citation validation and Nebius review path are new integration contributions",
+  "attempt004_offline_checks": {
+    "tests_run": 104,
+    "tests_passed": 104,
+    "errors": 0,
+    "failures": 0,
+    "recomputed_event_reviews": 230,
+    "historical_evaluation_files_checked": 29,
+    "historical_evaluation_files_unchanged": true,
+    "link_check": "passed",
+    "privacy_scan": "passed"
+  },
+  "new_paid_calls_before_attempt004": 1
 }

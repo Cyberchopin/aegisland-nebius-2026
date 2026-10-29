@@ -1,4 +1,4 @@
-# Review workbench — October 27, 2026
+# Review workbench — release status updated October 29, 2026
 
 ## Public provenance update
 
@@ -6,16 +6,18 @@ Published provenance is an allowlisted summary containing source revision,
 original source hashes, core pin, validation counts and trace identity. Home
 paths, commands and environment overrides from original run metadata are omitted.
 Six trace/video files retain exact upstream bytes; three provenance summaries
-are labeled projections. The added privacy test brings the local suite to 83.
+are labeled projections. The saved workbench snapshot includes 83 local tests;
+new Attempt 004 regression results are retained separately.
 
-## Release candidate update (prior local snapshot)
+## Published release
 
-The release repository includes the verified `demo/` folder and a Windows
-launcher. The CI entry point permits the local video-range test, blocks external
-connections and saves fresh output under `runs/`, refusing historical evidence
-paths and existing output folders. 82 tests pass locally on Windows; hosted
-Windows/Ubuntu jobs have not run yet. All 230 stored reviews were recomputed
-and all nine imported artifacts matched pinned upstream blobs.
+PR #2 is merged; main is `da0a2882b2126b4c67edb8b2329ce99b33075b50`.
+[Hosted Tests run 40648963281](https://github.com/Cyberchopin/aegisland-nebius-2026/actions/runs/40648963281)
+succeeded on PR #2 head `4ce68b01799f58f23b2c6019b5bb2f26d0b95d6f`, included
+in that merge. The 83 local tests and 230-event recomputation are saved release
+results, not newly generated model evaluations. Six original trace/video artifacts
+match upstream bytes; the three provenance summaries are sanitized projections.
+The new video and Devpost update remain owner tasks.
 
 ## What is implemented
 
@@ -83,7 +85,7 @@ newest core should be pinned and evaluated separately before integration.
 
 ## Verification and remaining work
 
-Fresh baseline: 74 offline unit tests passed. Window/escaping tests add five;
+Historical baseline: 74 offline unit tests passed. Window/escaping tests added five;
 local HTTP range integration adds one. Browser verification covers intrusion
 37→38, GPS approval at 22, enhancement at 30 and video seeking. The generation
 checks 230 per-event results against original source identities. Counts describe
@@ -91,10 +93,11 @@ engineering checks, not model accuracy or physical safety improvements.
 
 Priority before October 30, 10:00 AM America/Los_Angeles:
 
-1. Resolve a supported hosted-model configuration and obtain a bounded, separately
-   authorized live test. Require final content, finish `stop`, correct model,
-   matched source citation and retained usage/failure metadata. Do not relabel a
-   deterministic fallback as model success or reset historical request guards.
+1. Confirm whether the hosted service supports the requested reasoning setting.
+   Attempt 004 completed one bounded live review: HTTP 200, exact model, finish
+   `stop`, and matched source citation. See `verification/attempt004_public_summary.json`.
+   This result does not prove hosted reasoning-disable support, model accuracy or
+   physical safety. Do not relabel a deterministic fallback as model success.
 2. Use separately labeled trace windows for evaluation. Include approval pending,
    action transitions, enhanced observation and nominal controls. Do not use
    this viewer's curated bookmarks as evidence of automatic model discovery.
@@ -108,4 +111,7 @@ Priority before October 30, 10:00 AM America/Los_Angeles:
 
 Rules: https://nebiusglobalaihackathon.devpost.com/rules
 
-No paid request, deployment, remote push, merge or Devpost edit was performed.
+PR #2 publication is complete. Attempt 004 made one paid request; no deployment,
+video upload or Devpost edit was made. The OpenCV simulation, videos and traces
+are disclosed prior work; this iteration adds the source-linked workbench,
+bounded review windows, citation validation and Nebius review path.

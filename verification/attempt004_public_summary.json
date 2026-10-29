@@ -1,0 +1,39 @@
+{
+  "format_version": 1,
+  "attempt_id": "attempt-004",
+  "result": "limited_live_review_succeeded",
+  "request_count": 1,
+  "http_status": 200,
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "finish_reason": "stop",
+  "citation_validation": "PASS",
+  "selection": {
+    "line": 39,
+    "evidence_id": "c71390b01d39",
+    "check": "execution_claim"
+  },
+  "usage_tokens": {
+    "input": 388,
+    "output": 40
+  },
+  "estimated_cost_usd": 0.0001524,
+  "cost_note": "Estimate only; not an invoice or spending cap.",
+  "scope": "One bounded review of two disclosed synthetic simulation records.",
+  "limitations": [
+    "Does not establish model accuracy.",
+    "Does not establish real flight or physical hardware operation.",
+    "Does not establish production safety.",
+    "Does not establish long-term online service reliability.",
+    "Hosted support for the requested reasoning setting remains unconfirmed."
+  ],
+  "historical_attempts_001_to_003": "Preserved unchanged.",
+  "offline_verification": {
+    "tests_run": 104,
+    "tests_passed": 104,
+    "recomputed_event_reviews": 230,
+    "historical_files_checked": 29,
+    "historical_files_unchanged": true,
+    "links_checked": "passed",
+    "privacy_scan": "passed"
+  }
+}
