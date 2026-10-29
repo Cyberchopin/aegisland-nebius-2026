@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="860" viewBox="0 0 1200 860" role="img" aria-labelledby="title desc">
+<title id="title">AegisLand × Nebius — saved verification evidence</title><desc id="desc">Presentation of existing records. Offline checks: 104 of 104 tests passed, 230 event reviews recomputed, 29 historical files unchanged. Historical live attempts 001 to 003 are preserved: HTTP 401; HTTP 200 with review not verified; HTTP 200 with 1,024 reasoning tokens and finish length. Attempt 004: one request, HTTP 200, nvidia/nemotron-3-super-120b-a12b, finish stop, line 39 citation validation passed, 388 input and 40 output tokens, estimated cost 0.0001524 US dollars.</desc>
+<rect width="1200" height="860" fill="#f4f8fb"/><rect width="1200" height="8" fill="#3a3f45"/>
+<g font-family="Arial,sans-serif" fill="#17324d">
+<text x="60" y="78" font-size="38" font-weight="bold">AegisLand × Nebius — saved verification evidence</text>
+<text x="60" y="118" font-size="19">Presentation summary of existing records. No new tests, inference or Nebius calls.</text>
+<rect x="60" y="148" width="1080" height="190" rx="12" fill="#fff" stroke="#d5dee7"/>
+<text x="90" y="198" font-size="27" font-weight="bold">Offline verification</text>
+<text x="90" y="240" font-size="19" font-weight="bold">104 / 104 tests passed · 230 event reviews recomputed and matched</text>
+<text x="90" y="276" font-size="19">29 historical evaluation files unchanged · link check passed · privacy scan passed</text>
+<text x="90" y="310" font-size="19">Standard-library Python · no API key needed · external network blocked during checks</text>
+<rect x="60" y="362" width="1080" height="200" rx="12" fill="#fff" stroke="#d5dee7"/><rect x="60" y="362" width="8" height="200" rx="4" fill="#ad6a16"/>
+<text x="96" y="412" font-size="27" font-weight="bold">Historical live attempts — preserved unchanged</text>
+<text x="96" y="454" font-size="19"><tspan font-weight="bold">001</tspan> · HTTP 401 · no model or usage returned</text>
+<text x="96" y="490" font-size="19"><tspan font-weight="bold">002</tspan> · HTTP 200 · 324 in / 256 out tokens · review not_verified</text>
+<text x="96" y="526" font-size="19"><tspan font-weight="bold">003</tspan> · HTTP 200 · all 1,024 output tokens were reasoning · finish length · not_verified</text>
+<rect x="60" y="586" width="1080" height="230" rx="12" fill="#fff" stroke="#d5dee7"/><rect x="60" y="586" width="8" height="230" rx="4" fill="#477f5a"/>
+<text x="96" y="636" font-size="27" font-weight="bold">Attempt 004 — limited live review succeeded</text>
+<text x="96" y="678" font-size="19"><tspan font-weight="bold">1 request · HTTP 200 · finish_reason = stop · citation validation PASS</tspan></text>
+<text x="96" y="714" font-size="19">Model: nvidia/nemotron-3-super-120b-a12b on Nebius Token Factory</text>
+<text x="96" y="750" font-size="19">Selected line 39 · evidence c71390b01d39 · check execution_claim</text>
+<text x="96" y="786" font-size="19">388 input / 40 output tokens · estimated $0.0001524 (estimate, not an invoice) · no retry</text>
+<text x="60" y="843" font-size="16" fill="#47617b">One bounded review of disclosed synthetic records. Not a measure of model accuracy, real flight, production safety or service uptime.</text>
+</g></svg>
