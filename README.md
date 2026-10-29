@@ -19,7 +19,10 @@ Open http://127.0.0.1:8090/ . On Windows, double-click `Start_Demo.cmd` to selec
 the correct working folder automatically. No API key or installation is required.
 Video and traces are included in `demo/`; this is a local preview.
 
-See [reuse, build instructions and next milestones](docs/REVIEW_WORKBENCH.md).
+PR #2 is merged; published main is `da0a2882b2126b4c67edb8b2329ce99b33075b50`.
+[GitHub Actions Tests run 40648963281](https://github.com/Cyberchopin/aegisland-nebius-2026/actions/runs/40648963281)
+succeeded on PR #2 head `4ce68b01799f58f23b2c6019b5bb2f26d0b95d6f`, now included
+in main. See [reuse, build instructions and next milestones](docs/REVIEW_WORKBENCH.md).
 The builder verifies pinned source blobs and provenance hashes; no external core
 code is copied or imported. Imported owner-provided media and records remain
 in `demo/` and retain their original rights boundaries; the integration MIT
@@ -28,10 +31,12 @@ Trace and video bytes are preserved. Provenance downloads are public summaries
 with original source identities; private paths, commands and environment metadata
 are omitted from those summaries.
 
-**Real Nebius-hosted NVIDIA inference succeeded. Live citation-grounded review
-remains `not_verified`.** This repository provides a working offline evidence
-reader, deterministic review baseline, bounded provider adapter and preserved
-runtime/failure evidence. Model recommendations cannot issue flight commands.
+**Attempt 004 completed one bounded live citation-grounded review.** The request
+returned HTTP 200 from the configured model, finished with `stop`, and passed
+local citation validation for line 39. This single review does not measure model
+accuracy, establish real flight or production safety, or demonstrate a long-term
+online service. See the [public verification summary](verification/attempt004_public_summary.json).
+Model recommendations cannot issue flight commands.
 
 ## Run locally
 
@@ -63,8 +68,9 @@ python -B scripts/check_workbench.py --directory demo
 
 Choose a fresh results folder for each run. The check runner permits exact
 127.0.0.1 connections for the video test and blocks external connections.
-CI is configured for Windows and Ubuntu; local verification does not establish
-that the hosted GitHub jobs have already run.
+Windows and Ubuntu hosted CI completed successfully in the linked Tests run.
+The saved 83-test result and 230-event recomputation remain historical release
+evidence; new Attempt 004 preparation results are recorded separately.
 Fresh offline evaluation can be written with:
 
 ```sh
@@ -91,19 +97,21 @@ and citation validation. Six synthetic scenarios compare them reproducibly.
 | Attempt 001 | HTTP 401; no returned model/usage | Authentication failed; precise cause unproven |
 | Attempt 002 | HTTP 200, returned Nemotron 3 Super; 324 input / 256 output tokens; 2,304.33 ms | Review `not_verified`; old metadata cannot establish its exact failure |
 | Attempt 003 | HTTP 200, returned same model; 324 input / 1,024 output tokens; 6,450.761 ms | All 1,024 output tokens were reasoning; finish `length`; review `not_verified` |
+| Attempt 004 | HTTP 200; exact model; `stop`; line 39 citation passed; 388 input / 40 output tokens; estimated $0.0001524 | One bounded live review only; no accuracy, real-flight, production-safety or long-term-service claim |
 | Synthetic evaluation | No-model baseline 6/6; first-event mock 1/6 | Constructed harness results, not NVIDIA accuracy |
 | B4 verification | 74 offline tests pass | No successful live review or model-quality benchmark |
-| Workbench release checks | 83 local tests pass; 230 stored reviews recomputed | Deterministic checks, not model accuracy; hosted CI pending publication |
+| Saved workbench release checks | 83 local tests passed; 230 stored reviews recomputed | Saved results, not model accuracy; PR #2 merged and hosted Tests run succeeded |
 
 Model: `nvidia/nemotron-3-super-120b-a12b`.
 Successful runtime endpoint: `https://api.tokenfactory.nebius.com/v1/chat/completions`.
-Usage-based cost estimates are not invoices or spending caps. All three allowances
-are consumed. A fourth attempt has not been prepared or authorized.
+The Attempt 004 cost is an estimate, not an invoice or spending cap. Attempts
+001–003 remain unchanged. Attempt 004 made exactly one request; the service's
+support for the requested reasoning setting remains unconfirmed.
 
 NVIDIA documents non-thinking controls. Exact hosted Nebius support remains
-unconfirmed; the new configuration is serialized/tested offline and fails
-locally before transmission. No token-budget increase or speculative API retry
-is enabled. Credentials remain environment-only and are never needed for the demo.
+unconfirmed; the successful response does not verify that the hosted service
+honored the setting. No parameter-removal retry was made. Credentials are never
+needed for the offline demo.
 
 ## Evidence and submission materials
 
@@ -117,7 +125,7 @@ is enabled. Credentials remain environment-only and are never needed for the dem
 
 A workbench screenshot is included at `docs/assets/workbench-preview.jpg`.
 The updated video and Devpost entry still need owner completion. This branch
-provides a local test build; no deployment or Devpost update is implied. Historical
+contains the published workbench; no deployment or Devpost update is implied. Historical
 documents under `docs/submission/` describe the earlier evidence-only snapshot.
 
 ## Provenance and license
@@ -127,8 +135,9 @@ provides the prior simulation/perception work; the referenced baseline is
 `eda23d3`. No core module or model weight is imported or copied. The `demo/`
 folder bundles the owner's saved OpenCV simulation traces and display-video
 derivatives with their upstream identities. They are disclosed prior work.
-New contributions include the bounded trace-review integration, source-linked
-workbench, synthetic evaluation and provider/failure diagnostics.
+New contributions are the source-linked workbench, bounded review windows,
+citation validation and Nebius model-review path, with synthetic evaluation and
+provider/failure diagnostics.
 All traces are synthetic simulation; hardware operation, flight certification,
 safety improvement and model speedup are not established by this demo.
 

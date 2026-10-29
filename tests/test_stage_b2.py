@@ -257,7 +257,9 @@ class SmokeTests(unittest.TestCase):
     @patch("nebius_review.build_opener")
     def test_explicit_model_refusal_rejected(self, opener):
         response = opener.return_value.open.return_value.__enter__.return_value
-        response.read.return_value = json.dumps({"choices": [{"finish_reason": "stop",
+        response.status = 200
+        response.headers = {}
+        response.read.return_value = json.dumps({"model": live_smoke.MODEL, "choices": [{"finish_reason": "stop",
                                   "message": {"refusal": SECRET, "content": "{}"}}]}).encode()
         with self.assertRaises(ReviewError) as caught:
             NebiusProvider(api_key=SECRET).complete([])

@@ -100,7 +100,8 @@ class ReviewTests(unittest.TestCase):
     @patch("nebius_review.build_opener")
     def test_mocked_http_contract(self, opener):
         response = opener.return_value.open.return_value.__enter__.return_value
-        response.read.return_value = json.dumps({"choices": [{"finish_reason": "stop",
+        response.status = 200
+        response.read.return_value = json.dumps({"model": MODEL, "choices": [{"finish_reason": "stop",
             "message": {"content": "selection text"}}]}).encode()
         self.assertEqual(NebiusProvider(api_key="test-key").complete([]), "selection text")
         request = opener.return_value.open.call_args.args[0]
